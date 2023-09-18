@@ -6,7 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -19,7 +19,7 @@ class ProductController extends Controller
     {
         return view('product.create');
     }
-    public function store(Request $request):RedirectResponse
+    public function store( ProductRequest $request):RedirectResponse
     {
         $product = new Product;
         $product->name=$request->name;
@@ -38,7 +38,7 @@ class ProductController extends Controller
     {
         return view('product.edit',compact('product'));
     }
-    public function update(Request $request, $product):RedirectResponse
+    public function update(ProductRequest $request, $product):RedirectResponse
     {
         $product = Product::find($product);
         $product->name = $request->name;

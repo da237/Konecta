@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('app')
 
 @section('content')
-<form action="{{route('product.update')}}" method="post">
-    @method('PUT')
+<a href="{{route('product.index')}}">Regresar</a>
+<form action="{{route('product.update',$product->id)}}" method="post">
+@method('PUT')
 @csrf
 <label>Nombre</label>
 <input name="name" type="text" value="{{$product->name}}">

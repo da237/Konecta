@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('app')
 
 @section('content')
-
+<a href="{{route('product.index')}}">Regresar</a>
 <form method="POST" action="{{route('product.store')}}">
     @csrf
     <label>Nombre</label>

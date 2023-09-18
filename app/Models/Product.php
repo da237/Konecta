@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    protected $filable = [
+        'name',
+        'reference',
+        'price',
+        'weight',
+        'stock',
+        'fecha'
+    ];
 }

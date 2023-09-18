@@ -3,20 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         $products = Product::all();
         return view('product.index',compact('products'));
     }
-    public function create()
+    public function create():View
     {
         return view('product.create');
     }
-    public function store(Request $request)
+    public function store(Request $request):RedirectResponse
     {
         $product = new Product;
         $product->name=$request->name;
@@ -31,11 +34,11 @@ class ProductController extends Controller
     public function show(Product $product)
     {
     }
-    public function edit(Product $product)
+    public function edit(Product $product):View
     {
         return view('product.edit',compact('product'));
     }
-    public function update(Request $request, $product)
+    public function update(Request $request, $product):RedirectResponse
     {
         $product = Product::find($product);
         $product->name = $request->name;
@@ -47,7 +50,7 @@ class ProductController extends Controller
         $product->save();
         return redirect()->route('product.index')->with('Succes','Product Update');
     }
-    public function destroy(Product $product )
+    public function destroy(Product $product ):RedirectResponse
     {
         $product->delete();
         return redirect()->route('product.index');

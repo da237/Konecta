@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout.app')
 
 @section('content')
 <a href="{{route('product.index')}}">Regresar</a>

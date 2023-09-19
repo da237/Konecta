@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout.app')
 
 @section('content')
 <a href="{{route('product.index')}}">Regresar</a>
@@ -42,5 +42,6 @@
     <br>
     <input type="submit" value="Crear">
 </form>
-
 @endsection
+
+

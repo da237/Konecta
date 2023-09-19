@@ -29,7 +29,7 @@ class ProductController extends Controller
         $product->stock=$request->stock;
         $product->fecha=$request->fecha;
         $product->save();
-        return redirect()->route('product.index')->with('Succes','Product Create');
+        return redirect()->route('product.index');
     }
     public function show(Product $product)
     {
@@ -48,7 +48,7 @@ class ProductController extends Controller
         $product->stock=$request->stock;
         $product->fecha=$request->fecha;
         $product->save();
-        return redirect()->route('product.index')->with('Succes','Product Update');
+        return redirect()->route('product.index');
     }
     public function destroy(Product $product ):RedirectResponse
     {

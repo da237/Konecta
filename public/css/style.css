@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100vw;
+    height: 100px;
+    background-color: beige;
+    padding: 10px;
+    display: flex;
+}
+
+header nav{
+    width: 100vw;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li{
+    margin: 5px;
+}
+
+header nav ul li a{
+    color: #999;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    color: lightgreen;
+}

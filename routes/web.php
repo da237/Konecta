@@ -7,6 +7,8 @@ Route::view('/','principal')->name('principal');
 
 Route::resource('product',ProductController::class)->names('product');
 
+Route::view('compra','compra')->name('compra');
+
 // Route::get('/product',[ProductController::class, 'index'])
 // ->name('product.index');
 // Route::get('/product/create',[ProductController::class,'create'])

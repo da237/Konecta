@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1>Cafeteria</h1>
+<h1 style="text-align: center">Cafeteria</h1>
 <img src="{{asset('assets/img/descarga.jpg')}}" alt="" width="100%">
 @endsection
 

@@ -2,7 +2,6 @@
 
 @section('content')
     <a href="{{ route('product.create') }}">Crear Nuevo Producto</a>
-    <a href="#'">Realizar Venta de Producto</a>
     <ul>
         <table  border="bold" class="table">
             <thead class="thead-dark">
